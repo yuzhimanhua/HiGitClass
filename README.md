@@ -67,3 +67,15 @@ We use [**ESim**](https://github.com/shangjingbo1226/ESim) in the embedding modu
 
 With the embedding file, you can train the classifier as mentioned in Quick Start.
 Please always refer to the example datasets when adapting the code for a new dataset.
+
+## Citation
+If you find the implementation useful, please cite the following paper:
+```
+@inproceedings{zhang2019higitclass,
+  title={HiGitClass: Keyword-Driven Hierarchical Classification of GitHub Repositories},
+  author={Zhang, Yu and Xu, Frank F. and Li, Sha and Meng, Yu and Wang, Xuan and Li, Qi and Han, Jiawei},
+  booktitle={ICDM'19},
+  year={2019},
+  organization={IEEE}
+}
+```
