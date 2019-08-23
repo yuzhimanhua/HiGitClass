@@ -24,7 +24,7 @@ To reproduce the results in our paper, you need to first download the datasets a
 Level-1/Level-2/Overall Micro-F1/Macro-F1 scores will be shown in the last several lines of the output. The classification result can be found under your dataset folder. For example, if you are using the **Bioinformatics** dataset, the output will be ```./bio/out.txt```.
 
 ## Data
-Two datasets, **Machine-Learning** and **Bioinformatics**, are used in our paper. Besides the "input" version mentioned in the Quick Start section, we also provide the [**json version**](https://drive.google.com/file/d/1C7V9Ww-ZaoWqaHdNR_fryXfEmZEowYXK/view?usp=sharing), where each line is a json file with user name, text (description + README), tags, repo name, upper-level label and lower-level label. An example is shown below.
+Two datasets, **Machine-Learning** and **Bioinformatics**, are used in our paper. Besides the "input" version mentioned in the Quick Start section, we also provide the [**json version**](https://drive.google.com/file/d/1C7V9Ww-ZaoWqaHdNR_fryXfEmZEowYXK/view?usp=sharing), where each line is a json file with user name, text (description + README), tags, repository name, upper-level label and lower-level label. An example is shown below.
 
 ```
 {  
@@ -57,7 +57,7 @@ We use [**ESim**](https://github.com/shangjingbo1226/ESim) in the embedding modu
 
 1. Create a directory named ```${dataset}``` under the main folder (e.g., ```./bio```).
 
-2. Prepare three files: (1) ```./${dataset}/doc_id.txt``` containing labeled document ids for each class. Each line begins with the class id (starting from ```0```), followed by a colon, and then document ids in the corpus (starting from ```0```) of the corresponding class separated by commas; (2) ```./${dataset}/dataset.csv```; and (3) ```./${dataset}/dataset.json```. **You can refer to the example datasets ([doc_id/csv](https://drive.google.com/file/d/1rtbkQOdb6stFNvQk_Iossenr7kqYQjr4/view?usp=sharing) and [json](https://drive.google.com/file/d/16ebzkNkS4m3NBjAkpSO3XBkFpAzu-RJb/view?usp=sharing)) for the format.**
+2. Prepare three files: (1) ```./${dataset}/label_hier.txt``` indicating the parent children relationships between classes. The first class of each line is the parent class, followed by all its children classes. Tab is used as the delimiter; (2) ```./${dataset}/dataset.txt``` containing all repositories to be classified. Each line corresponds to one repository; (3) ```./${dataset}/keywords.txt``` containing class-related keywords for each leaf class. Each line has a class name and a keyword (multiple keywords are also supported); and (4) ```./${dataset}/${json-name}.json```. **You can refer to the provided [json files](https://drive.google.com/file/d/1C7V9Ww-ZaoWqaHdNR_fryXfEmZEowYXK/view?usp=sharing) for the format.**
 
 3. ```cd ESim/``` and install the dependencies [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) and [GSL](https://www.gnu.org/software/gsl/).
 
