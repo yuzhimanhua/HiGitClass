@@ -17,7 +17,7 @@ if __name__ == "__main__":
     
     ### Basic settings ###
     
-    # dataset selection: New York Times (default), arXiv and Yelp Review
+    # dataset selection: machine-learning (ai) or bioinformatics
     parser.add_argument('--dataset', default='ai', choices=['ai', 'bio'])
     # weak supervision selection: class-related keywords (default) and labeled documents
     parser.add_argument('--sup_source', default='keywords', choices=['keywords', 'docs'])
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     parser.add_argument('--delta', default=0.1, type=float)
     # normalized entropy threshold for blocking: 1.0 (default)
     parser.add_argument('--gamma', default=0.9, type=float)
-
+    # pretrained embedding name: ESim (default)
     parser.add_argument('--embedding', default='esim')
     
     args = parser.parse_args()
