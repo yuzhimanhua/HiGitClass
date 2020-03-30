@@ -75,6 +75,7 @@ If you find the implementation useful, please cite the following paper:
   title={HiGitClass: Keyword-Driven Hierarchical Classification of GitHub Repositories},
   author={Zhang, Yu and Xu, Frank F. and Li, Sha and Meng, Yu and Wang, Xuan and Li, Qi and Han, Jiawei},
   booktitle={ICDM'19},
+  pages={876--885},
   year={2019},
   organization={IEEE}
 }
