@@ -27,8 +27,7 @@ Level-1/Level-2/Overall Micro-F1/Macro-F1 scores will be shown in the last sever
 Two datasets, **Machine-Learning** and **Bioinformatics**, are used in our paper. Besides the "input" version mentioned in the Quick Start section, we also provide the [**json version**](https://drive.google.com/file/d/1C7V9Ww-ZaoWqaHdNR_fryXfEmZEowYXK/view?usp=sharing), where each line is a json file with user name, text (description + README), tags, repository name, upper-level label and lower-level label. An example is shown below.
 
 ```
-{  
-   "id":1,
+{
    "user":"Natsu6767",
    "text":"PyTorch Implementation of DCGAN trained on the CelebA dataset . # Deep Convolutional GAN ...",
    "tags":[  
