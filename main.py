@@ -71,19 +71,22 @@ if __name__ == "__main__":
         max_doc_length = 1500
         max_sent_length = 40
         common_words = 10000
-    if args.dataset == 'bio':
+
+    elif args.dataset == 'bio':
         update_interval = 30
         pretrain_epochs = 30
         self_lr = 5e-4
         max_doc_length = 1500
         max_sent_length = 40
         common_words = 10000
+
     decay = 1e-6
 
     if args.sup_source == 'docs':
         expand_num = 0
     else:
         expand_num = None
+        
     if args.update_interval is not None:
         update_interval = args.update_interval
     if args.pretrain_epochs is not None:

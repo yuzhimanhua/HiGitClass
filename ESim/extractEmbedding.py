@@ -17,7 +17,7 @@ with open('vec.dat') as fin:
 			continue
 		tot += 1
 
-with open('vec.dat') as fin, open('../'+dataset+'/embeeding_esim', 'w') as fout:
+with open('vec.dat') as fin, open('../'+dataset+'/embedding_esim', 'w') as fout:
 	fout.write(str(tot)+'\t100\n')
 	for line in fin:
 		tmp = line.strip().split()
