@@ -69,8 +69,6 @@ with open('node.dat', 'w') as fout:
 			continue
 		fout.write(W+' w\n')
 
-win = 5
-
 with open('../'+dataset+'/'+json_name) as fin1, open('../'+dataset+'/keywords.txt') as fin2, open('link.dat', 'w') as fout:
 	for idx, line in enumerate(fin1):
 		
@@ -88,13 +86,6 @@ with open('../'+dataset+'/'+json_name) as fin1, open('../'+dataset+'/keywords.tx
 			if cnt[token] < 5:
 				continue
 			sent.append(token)
-
-		for i in range(len(sent)):
-			for j in range(i+1, i+win+1):
-				if j >= len(sent):
-					continue
-				fout.write(sent[i]+' '+sent[j]+'\n')
-				fout.write(sent[j]+' '+sent[i]+'\n')
 
 		for i in range(len(sent)):
 			fout.write(sent[i]+' '+R+'\n')
