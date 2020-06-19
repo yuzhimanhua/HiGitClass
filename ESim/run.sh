@@ -9,13 +9,6 @@ link_file="link.dat"
 path_file="path.dat"
 output_file="vec.dat"
 
-if [ ${node_file} == "dblp_data/node.dat" ] && [ ! -e dblp_data/node.dat ]; then
-    echo ${green}===Downloading DBLP Dataset===${reset}
-    curl http://dmserv2.cs.illinois.edu/data/data_dblp.tar.gz --output data_dblp.tar.gz
-    tar -xvf data_dblp.tar.gz
-    mv data_dblp dblp_data
-fi
-
 make
 
 size=100 # embedding dimension
