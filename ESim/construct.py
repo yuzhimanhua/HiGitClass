@@ -12,7 +12,6 @@ json_name = args.json_name
 
 print('### Constructing HIN ###')
 
-
 cnt = dict()
 parent_label = dict()
 

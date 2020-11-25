@@ -2,7 +2,7 @@
 
 dataset="ai"
 json_name="AI_Hier.json"
-python constructHIN.py --dataset ${dataset} --json_name ${json_name}
+python construct.py --dataset ${dataset} --json_name ${json_name}
 
 node_file="node.dat"
 link_file="link.dat"
@@ -19,4 +19,4 @@ threads=20 # number of threads for training
 
 ./bin/esim -model 2 -alpha 0.025 -node ${node_file} -link ${link_file}  -path ${path_file} -output ${output_file} -binary 0 -size ${size} -negative ${negative} -samples ${samples} -iters ${iters} -threads ${threads}
 
-python extractEmbedding.py --dataset ${dataset}
+python postprocess.py --dataset ${dataset}
