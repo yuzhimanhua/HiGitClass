@@ -1,12 +1,13 @@
 import numpy as np
 np.random.seed(1234)
 from time import time
-import os
-# os.environ["CUDA_VISIBLE_DEVICES"]="0"
 from models import WSTC
 from load_data import load_dataset
 from utils import proceed_level, write_output
 
+import os
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 if __name__ == "__main__":
 
