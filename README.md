@@ -60,9 +60,9 @@ We use [**ESim**](https://github.com/shangjingbo1226/ESim) in the embedding modu
 
 2. Prepare three files: (1) ```./${dataset}/label_hier.txt``` indicating the parent children relationships between classes. The first class of each line is the parent class, followed by all its children classes. Tab is used as the delimiter; (2) ```./${dataset}/dataset.txt``` containing all repositories to be classified. Each line corresponds to one repository; (3) ```./${dataset}/keywords.txt``` containing class-related keywords for each leaf class. Each line has a class name and a keyword (multiple keywords are also supported); and (4) ```./${dataset}/${json-name}.json```. **You can refer to the provided [json files](https://drive.google.com/file/d/1C7V9Ww-ZaoWqaHdNR_fryXfEmZEowYXK/view?usp=sharing) for the format.**
 
-3. ```cd ESim/``` and install the dependencies [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) and [GSL](https://www.gnu.org/software/gsl/).
+3. Install the dependencies [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) (we already provide a zip file in ```ESim/```) and [GSL](https://www.gnu.org/software/gsl/).
 
-4. ```./run.sh```. Make sure you have changed the dataset name. The embedding file will be saved to your dataset folder (e.g., ```../bio/embedding_esim```).
+4. ```cd ESim/``` and then ```./run.sh```. Make sure you have changed the dataset name. The embedding file will be saved to your dataset folder (e.g., ```../bio/embedding_esim```).
 
 With the embedding file, you can train the classifier as mentioned in Quick Start.
 Please always refer to the example datasets when adapting the code for a new dataset.
