@@ -9,6 +9,7 @@ link_file="link.dat"
 path_file="path.dat"
 output_file="vec.dat"
 
+unzip eigen-3.3.3.zip
 make
 
 size=100 # embedding dimension
