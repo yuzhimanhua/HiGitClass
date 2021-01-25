@@ -1,9 +1,9 @@
 import string
-
 import argparse
-parser = argparse.ArgumentParser(description='main', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
+parser = argparse.ArgumentParser(description='main', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--dataset', default='ai', choices=['ai', 'bio'])
+
 args = parser.parse_args()
 dataset = args.dataset
 

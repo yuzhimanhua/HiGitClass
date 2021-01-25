@@ -1,15 +1,10 @@
 #!/bin/bash
-
-dataset="ai"
-json_name="AI_Hier.json"
-python construct.py --dataset ${dataset} --json_name ${json_name}
-
 node_file="node.dat"
 link_file="link.dat"
 path_file="path.dat"
 output_file="vec.dat"
 
-unzip eigen-3.3.3.zip
+#unzip eigen-3.3.3.zip
 make
 
 size=100 # embedding dimension
@@ -20,4 +15,3 @@ threads=20 # number of threads for training
 
 ./bin/esim -model 2 -alpha 0.025 -node ${node_file} -link ${link_file}  -path ${path_file} -output ${output_file} -binary 0 -size ${size} -negative ${negative} -samples ${samples} -iters ${iters} -threads ${threads}
 
-python postprocess.py --dataset ${dataset}
