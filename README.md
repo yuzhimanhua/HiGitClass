@@ -66,7 +66,7 @@ We use [**ESim**](https://github.com/shangjingbo1226/ESim) in the embedding modu
 1. Create a directory named ```${dataset}``` under the main folder (e.g., ```./bio```).
 
 2. Prepare three files:             
-(1) ```./${dataset}/label_hier.txt``` indicating the parent children relationships between classes. The first class of each line is the parent class, followed by all its children classes. The root class must be named as ROOT. Tab is used as the delimiter.           
+(1) ```./${dataset}/label_hier.txt``` indicating the parent children relationships between classes. The first class of each line is the parent class, followed by all its children classes. **The root class must be named as ROOT.** Tab is used as the delimiter.           
 (2) ```./${dataset}/keywords.txt``` containing class-related keywords for each leaf class. Each line has a class name and a keyword.           
 (3) ```./${dataset}/${json-name}.json```. **You can refer to the provided [json files](https://drive.google.com/file/d/11zIqAg062IneYNdqfTMBV00n7weyvKbR/view?usp=sharing) for the format.**
 
