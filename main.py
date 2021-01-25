@@ -21,17 +21,16 @@ if __name__ == "__main__":
 	
 	### Basic settings ###
 	
-	# dataset selection: machine-learning (ai) or bioinformatics
+	# dataset selection: ai (default, the machine learning dataset) or bio (the bioinformatics dataset)
 	parser.add_argument('--dataset', default='ai', choices=['ai', 'bio'])
-	# weak supervision selection: class-related keywords (default) and labeled documents
-	parser.add_argument('--sup_source', default='keywords', choices=['keywords', 'docs'])
+	# weak supervision selection: class-related keywords (default)
+	parser.add_argument('--sup_source', default='keywords', choices=['keywords'])
 	# the class tree level to proceed until: None (default) = maximum possible level
 	parser.add_argument('--max_level', default=None, type=int)
 	# the highest class tree level that documents can be assigned to: 1 (default)
 	parser.add_argument('--block_level', default=1, type=int)
-	# whether ground truth labels are available for evaluation: All (default, all documents have ground truth for evaluation),
-	# Subset (a subset of documents have ground truth for evaluation) and None (no ground truth)
-	parser.add_argument('--with_eval', default='All', choices=['All', 'Subset', 'None'])
+	# whether ground truth labels are available for evaluation: All (default, all documents have ground truth for evaluation) or None (no ground truth)
+	parser.add_argument('--with_eval', default='All', choices=['All', 'None'])
 	
 	### Training settings ###
 
@@ -39,8 +38,8 @@ if __name__ == "__main__":
 	parser.add_argument('--batch_size', default=256, type=int)
 	# pre-training epochs: None (default)
 	parser.add_argument('--pretrain_epochs', default=None, type=int)
-	# pseudo document generation method: bow (Bag-of-words, default) or lstm (LSTM language model)
-	parser.add_argument('--pseudo', default='bow', choices=['bow', 'lstm'])
+	# pseudo document generation method: bow (Bag-of-words, default)
+	parser.add_argument('--pseudo', default='bow', choices=['bow'])
 
 	### Hyperparameters settings ###
 
