@@ -1,3 +1,6 @@
+# The code structure is adapted from the WeSHClass implementation
+# https://github.com/yumeng5/WeSHClass
+
 import numpy as np
 np.random.seed(1234)
 from time import time
