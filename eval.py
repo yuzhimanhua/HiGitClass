@@ -1,13 +1,12 @@
 import string
 from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix
-
 import argparse
+
 parser = argparse.ArgumentParser(description='main', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-
 parser.add_argument('--dataset', default='ai', choices=['ai', 'bio'])
-args = parser.parse_args()
 
+args = parser.parse_args()
 dataset = args.dataset
 
 print('\n### Testing ###')
