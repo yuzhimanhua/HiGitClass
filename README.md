@@ -68,7 +68,7 @@ We use [**ESim**](https://github.com/shangjingbo1226/ESim) in the embedding modu
 2. Prepare three files:             
 (1) ```./${dataset}/label_hier.txt``` indicating the parent children relationships between classes. The first class of each line is the parent class, followed by all its children classes. **The root class must be named as ROOT.** Tab is used as the delimiter.           
 (2) ```./${dataset}/keywords.txt``` containing class-related keywords for each leaf class. Each line has a class name and a keyword.           
-(3) ```./${dataset}/${json-name}.json```. **You can refer to the provided [json files](https://drive.google.com/file/d/11zIqAg062IneYNdqfTMBV00n7weyvKbR/view?usp=sharing) for the format.**
+(3) ```./${dataset}/${json-name}.json```. **You can refer to the provided [json files](https://drive.google.com/file/d/11zIqAg062IneYNdqfTMBV00n7weyvKbR/view?usp=sharing) for the format. All fields except "repo" are required.**
 
 3. Install the dependencies [GSL](https://www.gnu.org/software/gsl/) and [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page). For Eigen, we already provide a zip file ```ESim/eigen-3.3.3.zip```. You can directly unzip it in ```ESim/```.
 
