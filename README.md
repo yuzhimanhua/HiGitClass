@@ -79,7 +79,7 @@ We use [**ESim**](https://github.com/shangjingbo1226/ESim) in the embedding modu
 (2) ```./${dataset}/keywords.txt``` containing class-related keywords for each leaf class. Each line has a class name and a keyword.           
 (3) ```./${dataset}/${json-name}.json```. **You can refer to the provided [json files](https://drive.google.com/file/d/11zIqAg062IneYNdqfTMBV00n7weyvKbR/view?usp=sharing) for the format. All fields except "repo" are required.**
 
-3. Install the dependencies [GSL](https://www.gnu.org/software/gsl/) and [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page). For Eigen, we already provide a zip file ```ESim/eigen-3.3.3.zip```. You can directly unzip it in ```ESim/```.
+3. Install the dependencies [**GSL**](https://www.gnu.org/software/gsl/) and [**Eigen**](http://eigen.tuxfamily.org/index.php?title=Main_Page). For Eigen, we already provide a zip file ```ESim/eigen-3.3.3.zip```. You can directly unzip it in ```ESim/```. For GSL, you can download it [here](https://drive.google.com/file/d/1UvmgrZbycC7wYAHahYGRB5pRtu6Aurhv/view?usp=sharing).
 
 4. ```./prep_emb.sh```. Make sure you change the dataset/json names.
 
