@@ -1,5 +1,5 @@
 # HiGitClass: Keyword-Driven Hierarchical Classification of GitHub Repositories
-This project focuses on hierarchical _dataless_ GitHub repository classification.
+This project focuses on weakly supervised hierarchical classification of GitHub repositories, where no human-annotated training samples are needed.
 
 ## Links
 
