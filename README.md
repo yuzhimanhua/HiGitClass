@@ -64,10 +64,10 @@ Two datasets, **Machine-Learning** and **Bioinformatics**, are used in our paper
 
 Dataset statistics are as follows.
 
-|Dataset | #Repositories | #Classes | Leaf class name| 
-| ------------- |-------------| -----| ---------- |
-| Machine-Learning | 1,596 | 3+14 | Image Generation, Object Detection, Image Classification, Semantic Segmentation, Pose Estimation,  Super Resolution, Text Generation, Text Classification, Named Entity Recognition, Question Answering, Machine Translation, Language Modeling, Speech Synthesis, Speech Recognition|
-| Bioinformatics | 876 | 2+10 | Sequence Analysis, Genome Analysis, Gene Expression, Systems Biology, Genetics and Population Analysis, Structural Bioinformatics, Phylogenetics, Text Mining, Bioimaging, Database and Ontologies|
+| Dataset | #Repositories | #Classes | Leaf class name | 
+| ------- | ------------- | -------- | --------------- |
+| Machine-Learning | 1,596 | 3+14 | Image Generation, Object Detection, Image Classification, Semantic Segmentation, Pose Estimation,  Super Resolution, Text Generation, Text Classification, Named Entity Recognition, Question Answering, Machine Translation, Language Modeling, Speech Synthesis, Speech Recognition |
+| Bioinformatics | 876 | 2+10 | Sequence Analysis, Genome Analysis, Gene Expression, Systems Biology, Genetics and Population Analysis, Structural Bioinformatics, Phylogenetics, Text Mining, Bioimaging, Database and Ontologies |
 
 ## Running on New Datasets
 We use [**ESim**](https://github.com/shangjingbo1226/ESim) in the embedding module. In the Quick Start section, we include a pretrained embedding file in the downloaded folders. If you would like to retrain the embedding (or **you have a new dataset**), please follow the steps below.
