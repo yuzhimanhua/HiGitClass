@@ -1,6 +1,6 @@
 gensim==3.8.1
 Keras==2.0.8
-nltk==3.5
+nltk==3.6.6
 numpy==1.19.5
 scikit-learn==0.20.0
 spherecluster==0.1.7
