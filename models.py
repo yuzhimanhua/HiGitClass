@@ -2,7 +2,6 @@ import numpy as np
 np.random.seed(1234)
 import os
 from time import time
-# os.environ["CUDA_VISIBLE_DEVICES"]="0"
 import csv
 import keras.backend as K
 from keras.engine.topology import Layer

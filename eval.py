@@ -12,7 +12,7 @@ dataset = args.dataset
 print('\n### Testing ###')
 
 p = dict()
-with open(dataset+'/label_hier.txt') as fin:
+with open(f'{dataset}/label_hier.txt') as fin:
 	for line in fin:
 		data = line.strip().split()
 		for label in data[1:]:
@@ -20,7 +20,7 @@ with open(dataset+'/label_hier.txt') as fin:
 
 y_u = []
 y_d = []
-with open(dataset+'/labels.txt') as fin:
+with open(f'{dataset}/labels.txt') as fin:
 	for line in fin:
 		dl = line.strip().lower()
 		y_u.append(p[dl])
@@ -28,7 +28,7 @@ with open(dataset+'/labels.txt') as fin:
 
 y_u_pred = []
 y_d_pred = []
-with open(dataset+'/out.txt') as fin:
+with open(f'{dataset}/out.txt') as fin:
 	for line in fin:
 		data = line.strip().split()
 		y_u_pred.append(data[0].lower())

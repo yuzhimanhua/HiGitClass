@@ -1,6 +1,7 @@
 import string
 import json
 import argparse
+from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description='main', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--dataset', default='ai', choices=['ai', 'bio'])
@@ -18,20 +19,20 @@ user = set()
 tag = set()
 name = set()
 max_len = 1500
-with open('../'+dataset+'/'+json_name) as fin:
-	for idx, line in enumerate(fin):
-		js = json.loads(line.strip())
+with open(f'../{dataset}/{json_name}') as fin:
+	for idx, line in enumerate(tqdm(fin)):
+		data = json.loads(line.strip())
 
 		repo.add('$REPO'+str(idx))
-		user.add('$USER'+js['user'])
+		user.add('$USER'+data['user'])
 
-		for T in js['tags']:
+		for T in data['tags']:
 			tag.add('$TAG'+T.lower())
 
-		for N in js['name']:
+		for N in data['name']:
 			name.add('$NAME'+N.lower())
 
-		W = js['text'].lower().split()
+		W = data['text'].lower().split()
 		for token in W[:max_len]:
 			if token not in cnt:
 				cnt[token] = 0
@@ -39,7 +40,7 @@ with open('../'+dataset+'/'+json_name) as fin:
 
 label = set()
 parent_label = dict()
-with open('../'+dataset+'/label_hier.txt') as fin:
+with open(f'../{dataset}/label_hier.txt') as fin:
 	for line in fin:
 		data = line.strip().split()
 		for L in data[1:]:
@@ -66,16 +67,16 @@ with open('node.dat', 'w') as fout:
 		if cnt[W] >= 5:
 			fout.write(W+' w\n')
 
-with open('../'+dataset+'/'+json_name) as fin1, open('../'+dataset+'/keywords.txt') as fin2, open('link.dat', 'w') as fout:
-	for idx, line in enumerate(fin1):	
-		js = json.loads(line)
+with open(f'../{dataset}/{json_name}') as fin1, open(f'../{dataset}/keywords.txt') as fin2, open('link.dat', 'w') as fout:
+	for idx, line in enumerate(tqdm(fin1)):	
+		data = json.loads(line)
 
 		R = '$REPO'+str(idx)
-		U = '$USER'+js['user']
-		Ts = ['$TAG'+x.lower() for x in js['tags']]
-		Ns = ['$NAME'+x.lower() for x in js['name']]
+		U = '$USER'+data['user']
+		Ts = ['$TAG'+x.lower() for x in data['tags']]
+		Ns = ['$NAME'+x.lower() for x in data['name']]
 
-		W = js['text'].lower().split()
+		W = data['text'].lower().split()
 
 		sent = []
 		for token in W[:max_len]:

@@ -12,15 +12,15 @@ print('### Extract Embedding ###')
 tot = 0
 with open('vec.dat') as fin:
 	for line in fin:
-		tmp = line.strip().split()
-		if tmp[0].startswith('$') or len(tmp) != 101:
+		data = line.strip().split()
+		if data[0].startswith('$') or len(data) != 101:
 			continue
 		tot += 1
 
-with open('vec.dat') as fin, open('../'+dataset+'/embedding_esim', 'w') as fout:
+with open('vec.dat') as fin, open(f'../{dataset}/embedding_esim', 'w') as fout:
 	fout.write(str(tot)+'\t100\n')
 	for line in fin:
-		tmp = line.strip().split()
-		if tmp[0].startswith('$') or len(tmp) != 101:
+		data = line.strip().split()
+		if data[0].startswith('$') or len(data) != 101:
 			continue
 		fout.write(line)
