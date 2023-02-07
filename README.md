@@ -1,5 +1,7 @@
 # HiGitClass: Keyword-Driven Hierarchical Classification of GitHub Repositories
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 This repository contains the source code for [**HiGitClass: Keyword-Driven Hierarchical Classification of GitHub Repositories**](https://arxiv.org/abs/1910.07115).
 
 ## Links
