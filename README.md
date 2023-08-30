@@ -90,7 +90,7 @@ After that, you can train the classifier as mentioned in Quick Start (i.e., ```.
 Please always refer to the example datasets when adapting the code for a new dataset.
 
 ## Citation
-If you find the implementation useful, please cite the following paper:
+If you find this repository useful, please cite the following paper:
 ```
 @inproceedings{zhang2019higitclass,
   title={HiGitClass: Keyword-Driven Hierarchical Classification of GitHub Repositories},
